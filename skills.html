@@ -3,73 +3,228 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skills — Chetan Paswan</title>
-  <meta name="description" content="Skills of Chetan Paswan — Graphic Design, Video Editing, Social Media, and Sales." />
-  <meta name="theme-color" content="#0b0b0f" />
+  <title>Skills - Chetan Paswan</title>
+  <meta
+    name="description"
+    content="Skills of Chetan Paswan across graphic design, video editing, social media, and sales operations."
+  />
+  <meta name="theme-color" content="#050816" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="css/styles.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 </head>
-<body>
-  <canvas id="bg-canvas"></canvas>
+<body class="page-skills">
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
 
   <nav class="nav" id="main-nav">
     <div class="nav__inner container">
-      <a href="/" class="nav__logo">CP</a>
-      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
+      <a href="index.html" class="nav__logo" aria-label="Chetan Paswan home">
+        <span class="nav__logo-mark">CP</span>
+        <span class="nav__logo-text">
+          Chetan Paswan
+          <small>Creative portfolio</small>
+        </span>
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
-      <ul class="nav__links" id="nav-links">
-        <li><a href="/skills.html" class="active">Skills</a></li>
-        <li><a href="/experience.html">Experience</a></li>
-        <li><a href="/portfolio.html">Portfolio</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
+
+      <div class="nav__links" id="nav-links">
+        <a href="skills.html" class="active">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
   </nav>
 
   <main class="page">
     <div class="container">
-      <header class="page__header anim-fade">
-        <a href="/" class="page__back">← Back</a>
-        <h1 class="page__title">Skills</h1>
+      <header class="page__header" data-reveal>
+        <a href="index.html" class="page__back">Back to home</a>
+        <p class="eyebrow page__eyebrow">Capabilities</p>
+        <h1 class="page__title">Creative execution backed by client-facing clarity.</h1>
+        <p class="page__lede">
+          The toolkit balances polished visuals with practical communication: strong design fundamentals, fast content
+          adaptation, and the discipline to keep delivery consistent.
+        </p>
+        <div class="surface page__hero-card">
+          Each skill card uses its own accent, motion, and confidence meter while staying inside the shared premium
+          design system.
+        </div>
       </header>
 
-      <div class="skills__grid anim-fade">
-        <div class="skill-card">
-          <div class="skill-card__icon">🎨</div>
-          <h3 class="skill-card__title">Graphic Design</h3>
-          <p class="skill-card__desc">Logos, branding, social media creatives, posters, and marketing materials.</p>
-        </div>
-        <div class="skill-card">
-          <div class="skill-card__icon">🎬</div>
-          <h3 class="skill-card__title">Video Editing</h3>
-          <p class="skill-card__desc">Promotional videos, reels, short-form content, and travel montages.</p>
-        </div>
-        <div class="skill-card">
-          <div class="skill-card__icon">📱</div>
-          <h3 class="skill-card__title">Social Media</h3>
-          <p class="skill-card__desc">Content strategy, page management, engagement growth, and paid campaigns.</p>
-        </div>
-        <div class="skill-card">
-          <div class="skill-card__icon">💼</div>
-          <h3 class="skill-card__title">Sales & CRM</h3>
-          <p class="skill-card__desc">Client handling, lead conversion, booking management, and follow-ups.</p>
-        </div>
-      </div>
+      <section class="skills__grid">
+        <article class="skill-card" data-accent="cyan" data-reveal data-tilt style="--skill-level: 92%;">
+          <div class="skill-card__inner">
+            <div class="skill-card__head">
+              <div class="skill-card__icon-shell" aria-hidden="true">
+                <svg class="skill-icon" viewBox="0 0 64 64" fill="none">
+                  <path d="M17 40l14-22 16 6-20 23-10-1z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"></path>
+                  <path d="M28 46l8 4" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                  <circle cx="42" cy="21" r="4" stroke="currentColor" stroke-width="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <h2 class="skill-card__title">Graphic Design</h2>
+                <p class="skill-card__desc">
+                  Logos, branding systems, social media creatives, posters, and marketing assets with a cleaner visual
+                  finish.
+                </p>
+              </div>
+            </div>
+
+            <div class="skill-card__meter">
+              <div class="skill-card__meter-track">
+                <span class="skill-card__meter-fill"></span>
+              </div>
+              <div>
+                <div class="skill-card__meter-value">92% confidence</div>
+                <div class="skill-card__meter-label">Design direction and layout polish</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="skill-card" data-accent="pink" data-reveal data-delay="80" data-tilt style="--skill-level: 89%;">
+          <div class="skill-card__inner">
+            <div class="skill-card__head">
+              <div class="skill-card__icon-shell" aria-hidden="true">
+                <svg class="skill-icon" viewBox="0 0 64 64" fill="none">
+                  <rect x="14" y="18" width="36" height="28" rx="6" stroke="currentColor" stroke-width="3"></rect>
+                  <path d="M29 28l12 6-12 6V28z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"></path>
+                  <path d="M20 12l4 6M44 12l-4 6" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <div>
+                <h2 class="skill-card__title">Video Editing</h2>
+                <p class="skill-card__desc">
+                  Promotional videos, short-form reels, highlight edits, and pacing that keeps content clear and engaging.
+                </p>
+              </div>
+            </div>
+
+            <div class="skill-card__meter">
+              <div class="skill-card__meter-track">
+                <span class="skill-card__meter-fill"></span>
+              </div>
+              <div>
+                <div class="skill-card__meter-value">89% confidence</div>
+                <div class="skill-card__meter-label">Cuts, rhythm, and promotional storytelling</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="skill-card" data-accent="gold" data-reveal data-delay="140" data-tilt style="--skill-level: 86%;">
+          <div class="skill-card__inner">
+            <div class="skill-card__head">
+              <div class="skill-card__icon-shell" aria-hidden="true">
+                <svg class="skill-icon" viewBox="0 0 64 64" fill="none">
+                  <path d="M20 18h24a6 6 0 016 6v15a6 6 0 01-6 6H30l-10 8v-8h0a6 6 0 01-6-6V24a6 6 0 016-6z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"></path>
+                  <path d="M25 28h14M25 35h10" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <div>
+                <h2 class="skill-card__title">Social Media</h2>
+                <p class="skill-card__desc">
+                  Content planning, page management, campaign support, and day-to-day communication tuned for audience
+                  engagement.
+                </p>
+              </div>
+            </div>
+
+            <div class="skill-card__meter">
+              <div class="skill-card__meter-track">
+                <span class="skill-card__meter-fill"></span>
+              </div>
+              <div>
+                <div class="skill-card__meter-value">86% confidence</div>
+                <div class="skill-card__meter-label">Content flow and audience-facing consistency</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="skill-card" data-accent="purple" data-reveal data-delay="200" data-tilt style="--skill-level: 94%;">
+          <div class="skill-card__inner">
+            <div class="skill-card__head">
+              <div class="skill-card__icon-shell" aria-hidden="true">
+                <svg class="skill-icon" viewBox="0 0 64 64" fill="none">
+                  <path d="M18 40l10-10 8 8 10-14" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M18 46h28a4 4 0 004-4V18" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                  <circle cx="22" cy="26" r="5" stroke="currentColor" stroke-width="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <h2 class="skill-card__title">Sales and CRM</h2>
+                <p class="skill-card__desc">
+                  Client handling, lead conversion, itinerary support, follow-ups, and booking coordination grounded in
+                  trust and responsiveness.
+                </p>
+              </div>
+            </div>
+
+            <div class="skill-card__meter">
+              <div class="skill-card__meter-track">
+                <span class="skill-card__meter-fill"></span>
+              </div>
+              <div>
+                <div class="skill-card__meter-value">94% confidence</div>
+                <div class="skill-card__meter-label">Communication, follow-through, and commercial discipline</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
     </div>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Chetan Paswan</p>
+      <div class="footer__divider"></div>
+      <div class="footer__content">
+        <div class="footer__brand">
+          <strong>Chetan Paswan</strong>
+          <p>Design craft, content execution, and client-first communication.</p>
+        </div>
+
+        <div class="footer__socials">
+          <a href="#" class="social-link" aria-label="Instagram placeholder link">
+            <span class="social-link__dot"></span>
+            Instagram
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn placeholder link">
+            <span class="social-link__dot"></span>
+            LinkedIn
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="whatsapp-btn" id="whatsapp-btn" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <a
+    href="https://wa.me/91XXXXXXXXXX"
+    target="_blank"
+    rel="noopener"
+    class="whatsapp-btn"
+    data-tooltip="Chat on WhatsApp"
+    aria-label="Chat on WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+      ></path>
+    </svg>
   </a>
 
   <script src="js/main.js"></script>

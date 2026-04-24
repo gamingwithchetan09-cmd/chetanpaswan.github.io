@@ -4,64 +4,213 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chetan Paswan</title>
-  <meta name="description" content="Chetan Paswan — B.Com student, travel agency sales executive, graphic designer, and video editor." />
-  <meta name="theme-color" content="#0b0b0f" />
+  <meta
+    name="description"
+    content="Chetan Paswan is a B.Com student, travel sales executive, graphic designer, and video editor with a sharp eye for clear, polished work."
+  />
+  <meta name="theme-color" content="#050816" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="css/styles.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 </head>
 <body class="page-home">
-  <canvas id="bg-canvas"></canvas>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
 
   <nav class="nav" id="main-nav">
     <div class="nav__inner container">
-      <a href="/" class="nav__logo">CP</a>
-      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
+      <a href="index.html" class="nav__logo" aria-label="Chetan Paswan home">
+        <span class="nav__logo-mark">CP</span>
+        <span class="nav__logo-text">
+          Chetan Paswan
+          <small>Creative portfolio</small>
+        </span>
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
-      <ul class="nav__links" id="nav-links">
-        <li><a href="/skills.html">Skills</a></li>
-        <li><a href="/experience.html">Experience</a></li>
-        <li><a href="/portfolio.html">Portfolio</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
+
+      <div class="nav__links" id="nav-links">
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
   </nav>
 
   <main class="home">
-    <div class="home__center">
-      <p class="home__greeting anim-fade">Hello, I'm</p>
-      <h1 class="home__name anim-fade">Chetan Paswan</h1>
-      <p class="home__tagline anim-fade">Sales Executive · Graphic Designer · Video Editor</p>
-      <div class="home__divider anim-fade"></div>
-      <p class="home__bio anim-fade">
-        B.Com student with 3 years of experience as a Travel Agency Sales Executive.
-        I combine business knowledge with creative skills in graphic design, video editing,
-        and social media management.
-      </p>
-      <div class="home__links anim-fade">
-        <a href="/portfolio.html" class="btn btn--primary">View Portfolio</a>
-        <a href="/contact.html" class="btn btn--outline">Contact Me</a>
+    <section class="home__hero container">
+      <div class="home__ambient-badges visible" data-reveal>
+        <span>Sales strategy</span>
+        <span>Graphic design</span>
+        <span>Video editing</span>
       </div>
-      <div class="home__nav-pills anim-fade">
-        <a href="/skills.html" class="pill">Skills</a>
-        <a href="/experience.html" class="pill">Experience</a>
-        <a href="/portfolio.html" class="pill">Portfolio</a>
-        <a href="/contact.html" class="pill">Contact</a>
+
+      <div class="home__grid">
+        <div class="home__copy surface surface--hero visible" data-reveal>
+          <p class="eyebrow">Chetan Paswan</p>
+          <h1 class="home__name">Sales insight with a designer&apos;s eye.</h1>
+
+          <div class="role-rotator" data-roles="Sales Executive|Graphic Designer|Video Editor|Social Media Creative">
+            <span class="role-rotator__label">I work across</span>
+            <span class="role-rotator__value">Sales Executive</span>
+          </div>
+
+          <p class="home__bio">
+            B.Com student with 3 years of experience as a Travel Agency Sales Executive. I combine business knowledge
+            with creative skills in graphic design, video editing, and social media management to produce work that is
+            both polished and practical.
+          </p>
+
+          <div class="home__actions">
+            <a href="portfolio.html" class="btn btn--primary">View Portfolio</a>
+            <a href="contact.html" class="btn btn--outline">Contact Me</a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="#" class="social-link" aria-label="Instagram placeholder link">
+              <span class="social-link__dot"></span>
+              Instagram
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn placeholder link">
+              <span class="social-link__dot"></span>
+              LinkedIn
+            </a>
+            <a href="#" class="social-link" aria-label="Behance placeholder link">
+              <span class="social-link__dot"></span>
+              Behance
+            </a>
+          </div>
+        </div>
+
+        <aside class="home__aside visible" data-reveal data-delay="120">
+          <div class="surface feature-card" data-tilt data-tilt-strength="14">
+            <p class="feature-card__eyebrow">Creative plus commercial</p>
+            <h2 class="feature-card__title">
+              Building clear campaigns, polished visuals, and reliable client experiences.
+            </h2>
+            <ul class="feature-card__list">
+              <li>
+                <span>Travel sales</span>
+                <strong>3 years of client-facing delivery</strong>
+              </li>
+              <li>
+                <span>Design focus</span>
+                <strong>Branding, posters, social creatives</strong>
+              </li>
+              <li>
+                <span>Content flow</span>
+                <strong>Video edits, reels, and promotional cuts</strong>
+              </li>
+            </ul>
+          </div>
+
+          <div class="metric-grid">
+            <div class="surface metric-card" data-reveal data-delay="180">
+              <p class="metric-card__value">3+</p>
+              <p class="metric-card__label">Years of <strong>sales experience</strong></p>
+            </div>
+            <div class="surface metric-card" data-reveal data-delay="240">
+              <p class="metric-card__value">4</p>
+              <p class="metric-card__label">Core strengths across <strong>creative execution</strong></p>
+            </div>
+          </div>
+        </aside>
       </div>
-    </div>
+
+      <a href="#quick-links" class="scroll-indicator visible" data-reveal data-delay="260" aria-label="Scroll to explore links">
+        <span class="scroll-indicator__mouse"></span>
+        Explore sections
+      </a>
+    </section>
+
+    <section class="section" id="quick-links">
+      <div class="container home__quick">
+        <div class="section-heading" data-reveal>
+          <div>
+            <p class="eyebrow">Quick tour</p>
+            <h2 class="section__title">Move through the site fast.</h2>
+          </div>
+          <p class="section__copy">
+            Each page keeps the same premium visual system while focusing on one part of the story: capability,
+            experience, selected work, and contact.
+          </p>
+        </div>
+
+        <div class="quick-links">
+          <a href="skills.html" class="surface quick-link" data-reveal data-delay="60" data-tilt>
+            <h3 class="quick-link__title">Skills</h3>
+            <p class="quick-link__copy">Animated icons, proficiency bars, and a cleaner view of the creative toolkit.</p>
+            <p class="quick-link__meta">Capabilities</p>
+          </a>
+
+          <a href="experience.html" class="surface quick-link" data-reveal data-delay="120" data-tilt>
+            <h3 class="quick-link__title">Experience</h3>
+            <p class="quick-link__copy">A glowing timeline that highlights client care, process, and commercial reliability.</p>
+            <p class="quick-link__meta">Professional history</p>
+          </a>
+
+          <a href="portfolio.html" class="surface quick-link" data-reveal data-delay="180" data-tilt>
+            <h3 class="quick-link__title">Portfolio</h3>
+            <p class="quick-link__copy">Glassmorphism project cards, tilt motion, and a more immersive review lightbox.</p>
+            <p class="quick-link__meta">Selected work</p>
+          </a>
+
+          <a href="contact.html" class="surface quick-link" data-reveal data-delay="240" data-tilt>
+            <h3 class="quick-link__title">Contact</h3>
+            <p class="quick-link__copy">A polished contact route with improved focus states and better message flow.</p>
+            <p class="quick-link__meta">Start a conversation</p>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer footer--home">
+  <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Chetan Paswan</p>
+      <div class="footer__divider"></div>
+      <div class="footer__content">
+        <div class="footer__brand">
+          <strong>Chetan Paswan</strong>
+          <p>Sales executive, graphic designer, and video editor.</p>
+        </div>
+
+        <div class="footer__socials">
+          <a href="#" class="social-link" aria-label="Portfolio social placeholder">
+            <span class="social-link__dot"></span>
+            Portfolio link
+          </a>
+          <a href="#" class="social-link" aria-label="Social profile placeholder">
+            <span class="social-link__dot"></span>
+            Social profile
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="whatsapp-btn" id="whatsapp-btn" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <a
+    href="https://wa.me/91XXXXXXXXXX"
+    target="_blank"
+    rel="noopener"
+    class="whatsapp-btn"
+    data-tooltip="Chat on WhatsApp"
+    aria-label="Chat on WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+      ></path>
+    </svg>
   </a>
 
   <script src="js/main.js"></script>

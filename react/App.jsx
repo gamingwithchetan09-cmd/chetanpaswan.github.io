@@ -1,32 +1,48 @@
-/* App.jsx — Multi-page React entry, mounts components based on current page */
-
 function mountComponents() {
-  // Portfolio page
-  const portfolioRoot = document.getElementById('portfolio-root');
+  const portfolioRoot = document.getElementById("portfolio-root");
   if (portfolioRoot) {
     ReactDOM.createRoot(portfolioRoot).render(React.createElement(window.PortfolioGrid));
   }
 
-  // Contact page
-  const contactRoot = document.getElementById('contact-root');
+  const contactRoot = document.getElementById("contact-root");
   if (contactRoot) {
     ReactDOM.createRoot(contactRoot).render(React.createElement(window.ContactForm));
   }
 
-  // Reviews — conditional render (on portfolio page)
-  const reviewsRoot = document.getElementById('reviews-root');
-  if (reviewsRoot && window.API) {
+  const reviewsRoot = document.getElementById("reviews-root");
+  if (reviewsRoot) {
+    const reviewsApp = ReactDOM.createRoot(reviewsRoot);
+
+    if (window.location.protocol === "file:" || !window.API) {
+      reviewsApp.render(
+        React.createElement(window.ReviewsSection, {
+          reviews: [],
+          status: "preview",
+        })
+      );
+      return;
+    }
+
+    reviewsApp.render(
+      React.createElement(window.ReviewsSection, {
+        reviews: [],
+        status: "loading",
+      })
+    );
+
     window.API.fetchReviews().then((reviews) => {
-      ReactDOM.createRoot(reviewsRoot).render(
-        React.createElement(window.ReviewsSection, { reviews })
+      reviewsApp.render(
+        React.createElement(window.ReviewsSection, {
+          reviews,
+          status: reviews.length ? "loaded" : "empty",
+        })
       );
     });
   }
 }
 
-// Wait for DOM
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', mountComponents);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", mountComponents);
 } else {
   mountComponents();
 }

@@ -3,68 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Experience — Chetan Paswan</title>
-  <meta name="description" content="Work experience of Chetan Paswan — 3 years as Travel Agency Sales Executive." />
-  <meta name="theme-color" content="#0b0b0f" />
+  <title>Experience - Chetan Paswan</title>
+  <meta
+    name="description"
+    content="Professional experience of Chetan Paswan with 3 years in travel sales and client-facing operations."
+  />
+  <meta name="theme-color" content="#050816" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="css/styles.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 </head>
-<body>
-  <canvas id="bg-canvas"></canvas>
+<body class="page-experience">
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
 
   <nav class="nav" id="main-nav">
     <div class="nav__inner container">
-      <a href="/" class="nav__logo">CP</a>
-      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
+      <a href="index.html" class="nav__logo" aria-label="Chetan Paswan home">
+        <span class="nav__logo-mark">CP</span>
+        <span class="nav__logo-text">
+          Chetan Paswan
+          <small>Creative portfolio</small>
+        </span>
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
-      <ul class="nav__links" id="nav-links">
-        <li><a href="/skills.html">Skills</a></li>
-        <li><a href="/experience.html" class="active">Experience</a></li>
-        <li><a href="/portfolio.html">Portfolio</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
+
+      <div class="nav__links" id="nav-links">
+        <a href="skills.html">Skills</a>
+        <a href="experience.html" class="active">Experience</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
   </nav>
 
   <main class="page">
     <div class="container">
-      <header class="page__header anim-fade">
-        <a href="/" class="page__back">← Back</a>
-        <h1 class="page__title">Experience</h1>
+      <header class="page__header" data-reveal>
+        <a href="index.html" class="page__back">Back to home</a>
+        <p class="eyebrow page__eyebrow">Professional experience</p>
+        <h1 class="page__title">Client trust, follow-through, and calm execution.</h1>
+        <p class="page__lede">
+          Travel sales built the habits behind the creative work: clear communication, dependable pacing, and a strong
+          sense of how to keep client expectations aligned with final delivery.
+        </p>
+        <div class="surface page__hero-card">
+          The timeline is intentionally simple in content, but richer in presentation: glowing markers, glass date
+          badges, and spacing that makes the story easier to scan.
+        </div>
       </header>
 
-      <div class="timeline anim-fade">
-        <div class="timeline__item">
-          <div class="timeline__marker"></div>
-          <div class="timeline__content">
-            <h3 class="timeline__role">Sales Executive</h3>
-            <p class="timeline__company">Travel Agency · 3 Years</p>
+      <section class="timeline">
+        <article class="timeline__item" data-reveal data-tilt>
+          <div class="timeline__marker" aria-hidden="true"></div>
+
+          <div class="surface timeline__card">
+            <div class="timeline__meta">
+              <span class="timeline__date">3 years</span>
+              <p class="timeline__company">Travel Agency</p>
+            </div>
+
+            <h2 class="timeline__role">Sales Executive</h2>
+            <p class="timeline__summary">
+              Managed booking support, vendor coordination, and long-term client communication while consistently working
+              toward sales targets and repeat business.
+            </p>
+
             <ul class="timeline__details">
-              <li>Managed end-to-end client bookings for domestic and international travel</li>
-              <li>Handled customer inquiries, follow-ups, and relationship management</li>
-              <li>Coordinated with vendors, hotels, and transport providers</li>
-              <li>Achieved consistent sales targets through consultative selling</li>
-              <li>Prepared itineraries and travel documentation for clients</li>
-              <li>Built long-term client relationships resulting in repeat business</li>
+              <li>Managed end-to-end client bookings for domestic and international travel.</li>
+              <li>Handled customer inquiries, follow-ups, and relationship management with a service-first approach.</li>
+              <li>Coordinated with vendors, hotels, and transport providers to keep delivery smooth.</li>
+              <li>Achieved consistent sales targets through consultative selling and clear itinerary planning.</li>
+              <li>Prepared itineraries and travel documentation with attention to accuracy and timing.</li>
+              <li>Built repeat business through reliable communication and long-term client trust.</li>
             </ul>
           </div>
-        </div>
-      </div>
+        </article>
+      </section>
     </div>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Chetan Paswan</p>
+      <div class="footer__divider"></div>
+      <div class="footer__content">
+        <div class="footer__brand">
+          <strong>Chetan Paswan</strong>
+          <p>Client-facing experience that supports stronger creative delivery.</p>
+        </div>
+
+        <div class="footer__socials">
+          <a href="portfolio.html" class="social-link" aria-label="Portfolio page link">
+            <span class="social-link__dot"></span>
+            View portfolio
+          </a>
+          <a href="contact.html" class="social-link" aria-label="Contact page link">
+            <span class="social-link__dot"></span>
+            Start a conversation
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="whatsapp-btn" id="whatsapp-btn" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <a
+    href="https://wa.me/91XXXXXXXXXX"
+    target="_blank"
+    rel="noopener"
+    class="whatsapp-btn"
+    data-tooltip="Chat on WhatsApp"
+    aria-label="Chat on WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+      ></path>
+    </svg>
   </a>
 
   <script src="js/main.js"></script>
